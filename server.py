@@ -16,6 +16,10 @@ app = Flask(__name__, static_folder='public',
             static_url_path='', template_folder='public')
 
 
+@app.route("/")
+def home_view():
+        return "<h1>Welcome to Geeks for Geeks</h1>"
+
 def calculate_order_amount(items):
     # Replace this constant with a calculation of the order's amount
     # Calculate the order total on the server to prevent
